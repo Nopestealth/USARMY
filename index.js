@@ -6,8 +6,8 @@ bot.on('ready', () => {
 });
 
 bot.on('guildMemberAdd',  member => {
-    member.send(`**Bienvenue ${member} sur le discord de l'US-Army. Nous sommes actuellement à la recherche de nouvelles recrues, alors n'hésite pas à postuler.**`);
-    var role = member.guild.roles.find('name', 'Joueur');
+    member.send(`**Bienvenue ${member} sur le discord de RiseMyID.**`);
+    var role = member.guild.roles.find('name', 'Citoyen');
     member.addRole(role);
 })
 
@@ -79,11 +79,10 @@ bot.on('message', message => {
             let propositionEmbed = new Discord.RichEmbed()
             .setTitle(`Proposition - ${message.author.tag}`)
             .setAuthor(message.author, message.author.avatarURL)
-            .setThumbnail("https://image.noelshack.com/fichiers/2019/15/7/1555260876-augurey.png")
+            .setThumbnail("https://cdn.discordapp.com/attachments/606917535341740034/617449254104858624/RiseMyID.png")
             .setColor(0x6E6E6E)
             .addField('Idée de', `${message.author.username}`)
             .addField('Proposition', `${sProposition}`)
-            .setFooter('!aide | Pour recevoir toutes les aides du serveur.')
 
             message.channel.send(propositionEmbed)
             .then(function (message) {

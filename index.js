@@ -7,7 +7,7 @@ bot.on('ready', () => {
 
 bot.on('guildMemberAdd', member => {
     // Ajoute le Rôle "Citoyen" à un nouveau joueur.
-    var role = member.guild.roles.find('name', "📛 Sans Papier 📛");
+    var role = member.guild.roles.find('name', "Citoyen");
     member.addRole(role);
 });
 
